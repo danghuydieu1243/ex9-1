@@ -14,6 +14,9 @@ public class DownloadServlet extends HttpServlet {
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response)
             throws IOException, ServletException {
+        response.setContentType("text/html");
+        response.setCharacterEncoding("UTF-8");
+        request.setCharacterEncoding("UTF-8");
 
         // get current action
         String action = request.getParameter("action");
@@ -43,6 +46,9 @@ public class DownloadServlet extends HttpServlet {
     public void doPost(HttpServletRequest request,
                        HttpServletResponse response)
             throws IOException, ServletException {
+        response.setContentType("text/html");
+        response.setCharacterEncoding("UTF-8");
+        request.setCharacterEncoding("UTF-8");
 
         String action = request.getParameter("action");
 
@@ -60,6 +66,8 @@ public class DownloadServlet extends HttpServlet {
 
     private String checkUser(HttpServletRequest request,
                              HttpServletResponse response) {
+        response.setContentType("text/html");
+        response.setCharacterEncoding("UTF-8");
 
         String productCode = request.getParameter("productCode");
         HttpSession session = request.getSession();
